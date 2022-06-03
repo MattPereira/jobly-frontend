@@ -29,8 +29,6 @@ const SearchForm = ({ searchFor }) => {
     setSearchTerm(e.target.value);
   };
 
-  console.log(Form);
-
   return (
     <div>
       <Form onSubmit={handleSubmit} className="row g-0 mb-3">

@@ -18,7 +18,7 @@ import jwt from "jsonwebtoken";
  *
  * - token: for logged in users, this is their auth JWT.
  *   Required to be set for most API calls. This is intially
- *   read from localStorage and synced to there via the
+ *   read from localStorage and synced to there via the custom
  *   useLocalStorage hook.
  *
  *   App -> Routes
@@ -54,7 +54,7 @@ function App() {
         if (token) {
           try {
             let { username } = jwt.decode(token);
-            //put token on the API class and us it to call the API
+            //put token on the API class and use it to call the API
             JoblyApi.token = token;
             let currentUser = await JoblyApi.getCurrentUser(username);
             setCurrentUser(currentUser);
