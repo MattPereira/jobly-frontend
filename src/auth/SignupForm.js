@@ -56,7 +56,7 @@ const SignupForm = ({ signup }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    //signup function passes form data up to <App/>
+    //signup function passes form data up to parent App component
     let result = await signup(formData);
     if (result.success) {
       history.push("/");

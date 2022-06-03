@@ -17,7 +17,7 @@ import {
  *
  * Logged out users see login and signup
  *
- * Rendered by App.js
+ * Rendered by App
  */
 
 const Navigation = ({ logout }) => {
@@ -81,7 +81,7 @@ const Navigation = ({ logout }) => {
         <NavLink tag={RRNavLink} to="/" className="navbar-brand">
           Home
         </NavLink>
-
+        {/* onClick toggle whether navbar drops down to display links */}
         <NavbarToggler
           onClick={() => {
             setIsOpen(!isOpen);
