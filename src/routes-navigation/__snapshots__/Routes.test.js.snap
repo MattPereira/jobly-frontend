@@ -6,13 +6,16 @@ exports[`matches snapshot 1`] = `
     class="text-center"
   >
     <h1
-      class="display-5"
+      class="display-3"
     >
-      JOBLY HOMEPAGE
+      JOBLY
     </h1>
     <p
       class="lead"
     >
+      All of the jobs, all of the times, all of the places.
+    </p>
+    <p>
        Welcome back, Elliot Alderson! 
     </p>
   </div>

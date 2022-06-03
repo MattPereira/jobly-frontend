@@ -49,7 +49,10 @@ const AppliedJobList = () => {
         {jobs.length ? (
           <JobCardList jobs={jobs} />
         ) : (
-          <p>No jobs applied to yet!</p>
+          <p className="lead">
+            {currentUser.firstName} {currentUser.lastName} has not applied to
+            any jobs yet!
+          </p>
         )}
       </div>
     </div>

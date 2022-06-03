@@ -58,7 +58,7 @@ const CompanyDetails = () => {
 
           <CardText className="lead">{company.description}</CardText>
           <Link to={`/companies/${company.handle}/edit`}>
-            <Button color="primary" className="px-4 rounded-pill">
+            <Button color="warning" className="px-4 rounded-pill">
               Edit Company Details
             </Button>
           </Link>

@@ -1,8 +1,8 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import SearchForm from "./SearchForm";
+import LoadingSpinner from "./LoadingSpinner";
 
 it("matches snapshot", function() {
-  const { asFragment } = render(<SearchForm />);
+  const { asFragment } = render(<LoadingSpinner />);
   expect(asFragment()).toMatchSnapshot();
 });

@@ -29,6 +29,8 @@ const SearchForm = ({ searchFor }) => {
     setSearchTerm(e.target.value);
   };
 
+  console.log(Form);
+
   return (
     <div>
       <Form onSubmit={handleSubmit} className="row g-0 mb-3">
@@ -38,12 +40,13 @@ const SearchForm = ({ searchFor }) => {
             name="searchTerm"
             placeholder="Enter search term.."
             bsSize="lg"
+            className="mb-3"
             value={searchTerm}
             onChange={handleChange}
           />
         </div>
         <div className="col-sm-4 row g-0">
-          <Button type="submit" color="secondary" size="lg">
+          <Button type="submit" color="secondary" size="lg" className="mb-3">
             Search
           </Button>
         </div>

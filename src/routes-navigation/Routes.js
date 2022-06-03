@@ -9,7 +9,7 @@ import LoginForm from "../auth/LoginForm";
 import SignupForm from "../auth/SignupForm";
 import EditProfileForm from "../profiles/EditProfileForm";
 import PrivateRoute from "./PrivateRoute";
-import EditCompanyForm from "../companies/EditCompanyForm";
+import EditCompany from "../companies/EditCompany";
 
 /** Site-wide routes.
  *
@@ -45,7 +45,7 @@ function Routes({ login, signup }) {
       </PrivateRoute>
 
       <PrivateRoute exact path="/companies/:handle/edit">
-        <EditCompanyForm />
+        <EditCompany />
       </PrivateRoute>
 
       <PrivateRoute exact path="/jobs">

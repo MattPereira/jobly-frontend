@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import JoblyApi from "../api/api";
 import { useParams, useHistory } from "react-router-dom";
 
@@ -30,41 +30,15 @@ import {
  * Routes -> EditCompanyForm -> Alert
  */
 
-const EditCompanyForm = () => {
+const EditCompanyForm = ({ company }) => {
   const { handle } = useParams();
   const history = useHistory();
 
-  const token = localStorage.getItem("jobly-token");
-  console.log(token);
-  //   const [company, setCompany] = useState(null);
-
-  //   /* On component mount, load company from API to populate form data*/
-  //   useEffect(
-  //     function getCompanyOnMount() {
-  //       console.debug("CompanyList useEffect getCompanyOnMount");
-
-  //       async function getCompany() {
-  //         setCompany(await JoblyApi.getCompany(handle));
-  //       }
-  //       getCompany();
-  //     },
-  //     [handle]
-  //   );
-
-  //   if (!company) return <LoadingSpinner />;
-
-  //   const [formData, setFormData] = useState({
-  //     name: company.name,
-  //     description: company.description,
-  //     numEmployees: company.numEmployees,
-  //     logoUrl: company.logoUrl,
-  //   });
-
   const [formData, setFormData] = useState({
-    name: "",
-    description: "",
-    numEmployees: "",
-    logoUrl: "",
+    name: company.name,
+    description: company.description,
+    numEmployees: company.numEmployees,
+    logoUrl: company.logoUrl,
   });
 
   const [formErrors, setFormErrors] = useState([]);
